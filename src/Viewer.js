@@ -1,13 +1,15 @@
 import React from 'react';
-import './css/Viewer.css';
+import Showdown from 'showdown';
 
 const Viewer = (props) => {
 	const parseContent = (content) => {
-		return(content);
+    let converter = new Showdown.Converter();
+    let html = converter.makeHtml(content);
+		return(html);
 	}
 	return(
-		<div id='viewer' className='has-background-info column'>
-			{parseContent(props.content)}
+		<div id='viewer' className='column col-8' dangerouslySetInnerHTML={{ __html: parseContent(props.content) }}>
+			{/* preview will show up here */}
 		</div>
 	);
 }

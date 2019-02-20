@@ -1,0 +1,58 @@
+html, body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+	background-color: #727072;
+}
+.container{
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+.row{
+	display: flex;
+	flex-direction: row;
+}
+#info{
+	width: 100%;
+	border-bottom: 1px solid #3B413C;
+	margin-bottom: 1rem;
+}
+#info h1, #info h1, #info h1,
+#info h1, #info h1, #info h1{
+	color: #E2C044;
+}
+#info .content{
+	color: #EBEBEB;
+}
+#editor{
+	min-height: 80vh;
+	margin-bottom: 4rem;
+	margin-right: 0.4rem;
+	padding: 0.4rem 1rem 0.4rem 1rem !important;
+	background-color: #3B413C;
+	color: #EBEBEB;
+	flex: 1;
+}
+#viewer{
+	min-height: 80vh;
+	margin-bottom: 4rem;
+	margin-left: 0.4rem;
+	padding: 0.4rem 1rem 0.4rem 1rem !important;
+	white-space: pre-wrap;      /* CSS3 */   
+  white-space: -moz-pre-wrap; /* Firefox */    
+  white-space: -pre-wrap;     /* Opera <7 */   
+  white-space: -o-pre-wrap;   /* Opera 7 */    
+  word-wrap: break-word;      /* IE */
+  display: inline-block;
+  background-color: #3B413C;
+	color: #EBEBEB;
+	flex: 2;
+}
+#viewer h1, #viewer h2, #viewer h3,
+#viewer h4, #viewer h5, #viewer h6,
+#viewer p, #viewer ul{
+	margin: 0;
+}

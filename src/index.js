@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import 'bulma/css/bulma.min.css';
+import './css/style.css';
 
 import Editor from './Editor';
 import Viewer from './Viewer';
 import Info from './Info';
-
-let appInfo = 'This application does some shit to view some shit';
 
 class App extends Component {
 	constructor(props) {
@@ -19,17 +17,17 @@ class App extends Component {
 
 	updateEditor = (event) => {
 		this.setState({
-			input: event.target.innerHTML,
+			input: event.target.innerText,
 		});
 	}
 
   render() {
     return (
     	<div className='container'>
-	      <div className='columns'>
+	      <div className='row'>
 	      	<Info info={this.state.info}/>
 	      </div>
-	      <div className='columns is-gapless'>
+	      <div className='row'>
 	      	<Editor onChange={this.updateEditor} />
 	      	<Viewer content={this.state.input} />
 	      </div>
@@ -39,4 +37,4 @@ class App extends Component {
 }
 
 
-ReactDOM.render(<App info={appInfo} />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

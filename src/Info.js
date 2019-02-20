@@ -1,11 +1,11 @@
 import React from 'react';
-import './css/Info.css';
 
 const Info = (props) => {
 	return(
-		<div id='info' className='column section has-text-centered'>
+		<div id='info'>
 			<div className='content'>
-				{props.info}
+				<h1>Couch3ater's Simple Markdown Shits.</h1>
+				<p>This application is nothing more than a simple markdown editor. Input is previewed in real-time as information is added to the text editor. Support for Github-flavored markdown will be added at a later date.</p>
 			</div>
 		</div>
 	);
