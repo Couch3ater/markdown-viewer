@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './css/style.css';
+import 'spectre.css';
 
 import Editor from './Editor';
 import Viewer from './Viewer';
@@ -24,12 +25,14 @@ class App extends Component {
   render() {
     return (
     	<div className='container'>
-	      <div className='row'>
-	      	<Info info={this.state.info}/>
+	      <div className='columns'>
+	      	<div className='column col-10 col-mx-auto'>
+	      		<Info info={this.state.info}/>
+	      	</div>
 	      </div>
-	      <div className='row'>
-	      	<Editor onChange={this.updateEditor} />
-	      	<Viewer content={this.state.input} />
+	      <div className='columns'>
+      		<Editor onChange={this.updateEditor} />
+      		<Viewer content={this.state.input} />
 	      </div>
       </div>
     );

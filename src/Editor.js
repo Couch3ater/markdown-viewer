@@ -6,8 +6,11 @@ const Editor = (props) => {
 	}
 
 	return(
-		<div id='editor' contentEditable='true' onInput={contentChange}>
+		<div className='column col-4 col-mx-auto'>
+			<p className='text-bold'>Enter markdown here</p>
+			<div id='editor' className='panel' contentEditable='true' onInput={contentChange}>
 
+			</div>
 		</div>
 	);
 }

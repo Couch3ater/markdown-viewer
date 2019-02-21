@@ -8,8 +8,11 @@ const Viewer = (props) => {
 		return(html);
 	}
 	return(
-		<div id='viewer' className='column col-8' dangerouslySetInnerHTML={{ __html: parseContent(props.content) }}>
-			{/* preview will show up here */}
+		<div className='column col-7 col-mx-auto'>
+			<p className='text-bold'>Preview document here</p>
+			<div id='viewer' className='panel' dangerouslySetInnerHTML={{ __html: parseContent(props.content) }}>
+				
+			</div>
 		</div>
 	);
 }
